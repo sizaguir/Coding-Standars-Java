@@ -1,0 +1,26 @@
+name: Java Code Standards Check
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  analyze-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Descargar Checkstyle
+        run: wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.4/checkstyle-10.12.4-all.jar
+
+      - name: Ejecutar análisis estático
+        # El parámetro -c /sun_checks.xml aplica las convenciones estándar de Sun/Oracle
+        # El *.java analiza todos los archivos Java en la raíz de tu repositorio
+        run: java -jar checkstyle-10.12.4-all.jar -c /sun_checks.xml *.java
