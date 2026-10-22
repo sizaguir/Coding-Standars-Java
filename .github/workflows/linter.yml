@@ -23,4 +23,4 @@ jobs:
       - name: Ejecutar análisis estático
         # El parámetro -c /sun_checks.xml aplica las convenciones estándar de Sun/Oracle
         # El *.java analiza todos los archivos Java en la raíz de tu repositorio
-        run: java -jar checkstyle-10.12.4-all.jar -c /sun_checks.xml *.java
+        run: java -jar checkstyle-10.12.4-all.jar -c /sun_checks.xml java/src/workshop/
