@@ -1,0 +1,8 @@
+{
+  "python.analysis.typeCheckingMode": "basic",
+  "pylint.enabled": true,
+  "flake8.enabled": true,
+  "java.checkstyle.configuration": "/sun_checks.xml",
+  "editor.rulers": [79, 80],
+  "files.trimTrailingWhitespace": true
+}
