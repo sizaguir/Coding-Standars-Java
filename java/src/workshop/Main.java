@@ -2,7 +2,7 @@ package workshop;
 
 import java.util.ArrayList;
 import java.util.List;
-/*Edit*/
+
 /**
  * Stores the grades of a student and calculates the results.
  */
